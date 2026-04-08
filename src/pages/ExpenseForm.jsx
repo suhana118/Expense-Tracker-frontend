@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import api from "../api/axios";
+import API from "../services/api"; // ✅ FIXED IMPORT
 import { useNavigate, useParams } from "react-router-dom";
 
 const ExpenseForm = () => {
@@ -15,7 +15,7 @@ const ExpenseForm = () => {
 
   useEffect(() => {
     if (id) {
-      api.get(`/expenses/${id}`).then((res) => setForm(res.data));
+      API.get(`/${id}`).then((res) => setForm(res.data)); // ✅ FIXED URL
     }
   }, [id]);
 
@@ -27,13 +27,17 @@ const ExpenseForm = () => {
       return;
     }
 
-    if (id) {
-      await api.put(`/expenses/${id}`, form);
-    } else {
-      await api.post("/expenses", form);
-    }
+    try {
+      if (id) {
+        await API.put(`/${id}`, form); // ✅ FIXED
+      } else {
+        await API.post("/", form); // ✅ FIXED
+      }
 
-    navigate("/");
+      navigate("/");
+    } catch (error) {
+      console.error("Error saving expense:", error); // ✅ ADDED ERROR LOG
+    }
   };
 
   return (
@@ -43,22 +47,26 @@ const ExpenseForm = () => {
         value={form.title}
         onChange={(e) => setForm({ ...form, title: e.target.value })}
       />
+
       <input
         placeholder="Amount"
         type="number"
         value={form.amount}
         onChange={(e) => setForm({ ...form, amount: e.target.value })}
       />
+
       <input
         placeholder="Category"
         value={form.category}
         onChange={(e) => setForm({ ...form, category: e.target.value })}
       />
+
       <input
         type="date"
-        value={form.date?.substring(0, 10)}
+        value={form.date ? form.date.substring(0, 10) : ""}
         onChange={(e) => setForm({ ...form, date: e.target.value })}
       />
+
       <button type="submit">Save</button>
     </form>
   );
