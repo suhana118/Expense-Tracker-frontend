@@ -1,22 +1,26 @@
+/* Google Font (add in index.html if not added) */
+/* <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"> */
+
 /* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Body */
+/* Background */
 body {
-  background: #F5F7FA;
-  color: #0F172A;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #f1f5f9;
+  min-height: 100vh;
 }
 
 /* Container */
 .container {
-  max-width: 880px;
+  max-width: 900px;
   margin: auto;
-  padding: 30px 20px;
+  padding: 40px 20px;
 }
 
 /* Header */
@@ -24,62 +28,67 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 600;
+  background: linear-gradient(90deg, #38bdf8, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Add Button */
 .add-btn {
-  background: #0EA5E9;
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
   color: white;
-  padding: 8px 14px;
-  border-radius: 6px;
+  padding: 8px 16px;
+  border-radius: 20px;
   text-decoration: none;
-  transition: all 0.2s ease;
+  font-size: 14px;
+  transition: 0.3s;
 }
 
 .add-btn:hover {
-  background: #0284C7;
-  transform: translateY(-1px);
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.5);
 }
 
-/* Card */
+/* Card (Glass Effect) */
 .card {
-  background: #FFFFFF;
-  padding: 16px;
-  margin-bottom: 12px;
-  border-radius: 10px;
-  border: 1px solid #E2E8F0;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 14px;
+  padding: 18px;
+  margin-bottom: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
 }
 
 .card:hover {
-  border-color: #0EA5E9;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 
 /* Text */
 .title {
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .amount {
-  color: #0EA5E9;
+  color: #38bdf8;
   font-weight: bold;
-  margin-top: 4px;
+  margin-top: 5px;
 }
 
 .meta {
   font-size: 12px;
-  color: #64748B;
+  color: #94a3b8;
   margin-top: 3px;
 }
 
@@ -87,84 +96,84 @@ h2 {
 button {
   border: none;
   padding: 6px 12px;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
-  margin-left: 6px;
+  margin-left: 8px;
   font-size: 12px;
-  transition: all 0.2s ease;
+  transition: 0.3s;
 }
 
 /* Edit */
 .edit-btn {
-  background: #10B981;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
   color: white;
 }
 
 .edit-btn:hover {
-  background: #059669;
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 /* Delete */
 .delete-btn {
-  background: #EF4444;
+  background: linear-gradient(135deg, #ef4444, #dc2626);
   color: white;
 }
 
 .delete-btn:hover {
-  background: #DC2626;
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
-/* Actions */
-.actions {
-  display: flex;
-}
-
-/* Form */
+/* Form (Glass UI) */
 form {
-  background: #FFFFFF;
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid #E2E8F0;
-  max-width: 450px;
-  margin: 40px auto;
+  max-width: 420px;
+  margin: 50px auto;
+  padding: 25px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Inputs */
 input, select {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 14px;
-  border-radius: 6px;
-  border: 1px solid #CBD5E1;
-  font-size: 13px;
-  transition: border 0.2s ease;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  font-size: 14px;
+}
+
+input::placeholder {
+  color: #94a3b8;
 }
 
 input:focus {
-  border-color: #0EA5E9;
-  outline: none;
+  outline: 1px solid #38bdf8;
 }
 
 /* Submit */
 .submit-btn {
-  background: #0EA5E9;
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
   color: white;
   width: 100%;
-  padding: 10px;
+  padding: 12px;
+  border-radius: 10px;
   font-weight: 500;
 }
 
 .submit-btn:hover {
-  background: #0284C7;
+  transform: scale(1.03);
+  box-shadow: 0 6px 25px rgba(56, 189, 248, 0.5);
 }
 
 /* Empty */
 .empty {
   text-align: center;
   margin-top: 40px;
-  color: #64748B;
+  color: #94a3b8;
 }
 
 /* Loading */
@@ -173,7 +182,7 @@ input:focus {
   margin-top: 40px;
 }
 
-/* 📱 Mobile Responsive */
+/* Mobile */
 @media (max-width: 600px) {
   .card {
     flex-direction: column;
@@ -188,7 +197,7 @@ input:focus {
 
   .header {
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     align-items: flex-start;
   }
 }
