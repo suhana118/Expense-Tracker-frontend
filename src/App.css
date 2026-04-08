@@ -39,11 +39,12 @@ h2 {
   padding: 8px 14px;
   border-radius: 6px;
   text-decoration: none;
-  transition: 0.2s;
+  transition: all 0.2s ease;
 }
 
 .add-btn:hover {
   background: #0284C7;
+  transform: translateY(-1px);
 }
 
 /* Card */
@@ -51,16 +52,17 @@ h2 {
   background: #FFFFFF;
   padding: 16px;
   margin-bottom: 12px;
-  border-radius: 8px;
+  border-radius: 10px;
   border: 1px solid #E2E8F0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: 0.2s;
+  transition: all 0.2s ease;
 }
 
 .card:hover {
   border-color: #0EA5E9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 /* Text */
@@ -84,11 +86,12 @@ h2 {
 /* Buttons */
 button {
   border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: 6px 12px;
+  border-radius: 6px;
   cursor: pointer;
   margin-left: 6px;
   font-size: 12px;
+  transition: all 0.2s ease;
 }
 
 /* Edit */
@@ -99,6 +102,7 @@ button {
 
 .edit-btn:hover {
   background: #059669;
+  transform: scale(1.05);
 }
 
 /* Delete */
@@ -109,6 +113,7 @@ button {
 
 .delete-btn:hover {
   background: #DC2626;
+  transform: scale(1.05);
 }
 
 /* Actions */
@@ -119,19 +124,22 @@ button {
 /* Form */
 form {
   background: #FFFFFF;
-  padding: 18px;
-  border-radius: 8px;
+  padding: 20px;
+  border-radius: 10px;
   border: 1px solid #E2E8F0;
+  max-width: 450px;
+  margin: 40px auto;
 }
 
 /* Inputs */
 input, select {
   width: 100%;
-  padding: 9px;
-  margin-bottom: 12px;
-  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 14px;
+  border-radius: 6px;
   border: 1px solid #CBD5E1;
   font-size: 13px;
+  transition: border 0.2s ease;
 }
 
 input:focus {
@@ -144,7 +152,8 @@ input:focus {
   background: #0EA5E9;
   color: white;
   width: 100%;
-  padding: 9px;
+  padding: 10px;
+  font-weight: 500;
 }
 
 .submit-btn:hover {
@@ -162,4 +171,24 @@ input:focus {
 .loading {
   text-align: center;
   margin-top: 40px;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 600px) {
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
 }
