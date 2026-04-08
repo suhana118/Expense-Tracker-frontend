@@ -8,9 +8,8 @@
 
 /* Background */
 body {
-  background: linear-gradient(135deg, #e0f2fe, #dcfce7);
-  color: #0f172a;
-  min-height: 100vh;
+  background: #fefce8; /* soft cream */
+  color: #1f2937;
 }
 
 /* Container */
@@ -31,44 +30,34 @@ body {
 h2 {
   font-size: 26px;
   font-weight: 600;
-  background: linear-gradient(90deg, #0ea5e9, #22c55e);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #166534;
 }
 
 /* Add Button */
 .add-btn {
-  background: linear-gradient(135deg, #38bdf8, #4ade80);
+  background: #22c55e;
   color: white;
-  padding: 8px 16px;
-  border-radius: 20px;
+  padding: 10px 18px;
+  border-radius: 10px;
   text-decoration: none;
-  font-size: 14px;
-  transition: 0.3s;
 }
 
 .add-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+  background: #16a34a;
 }
 
-/* Card (Light Glass Effect) */
+/* Card */
 .card {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(10px);
-  border-radius: 14px;
+  background: #ffffff;
+  border-radius: 12px;
   padding: 18px;
   margin-bottom: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  transition: 0.3s;
+  border: 1px solid #dcfce7;
+  transition: 0.2s;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 
 /* Text */
@@ -78,15 +67,14 @@ h2 {
 }
 
 .amount {
-  color: #0ea5e9;
+  color: #16a34a;
   font-weight: bold;
   margin-top: 5px;
 }
 
 .meta {
   font-size: 12px;
-  color: #64748b;
-  margin-top: 3px;
+  color: #6b7280;
 }
 
 /* Buttons */
@@ -96,39 +84,28 @@ button {
   border-radius: 8px;
   cursor: pointer;
   margin-left: 8px;
-  font-size: 12px;
-  transition: 0.3s;
 }
 
 /* Edit */
 .edit-btn {
-  background: linear-gradient(135deg, #4ade80, #22c55e);
+  background: #4ade80;
   color: white;
-}
-
-.edit-btn:hover {
-  transform: scale(1.1);
 }
 
 /* Delete */
 .delete-btn {
-  background: linear-gradient(135deg, #f87171, #ef4444);
+  background: #f87171;
   color: white;
 }
 
-.delete-btn:hover {
-  transform: scale(1.1);
-}
-
-/* Form (Light Glass UI) */
+/* Form */
 form {
   max-width: 420px;
   margin: 50px auto;
   padding: 25px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 14px;
+  background: #ffffff;
+  border: 1px solid #dcfce7;
 }
 
 /* Inputs */
@@ -137,65 +114,25 @@ input, select {
   padding: 12px;
   margin-bottom: 15px;
   border-radius: 8px;
-  border: 1px solid #e2e8f0;
-  background: #f8fafc;
-  color: #0f172a;
-  font-size: 14px;
-}
-
-input::placeholder {
-  color: #94a3b8;
+  border: 1px solid #d1fae5;
+  background: #f0fdf4;
+  color: #1f2937;
 }
 
 input:focus {
   outline: none;
-  border: 1px solid #38bdf8;
+  border: 1px solid #22c55e;
 }
 
 /* Submit */
 .submit-btn {
-  background: linear-gradient(135deg, #38bdf8, #22c55e);
+  background: #22c55e;
   color: white;
   width: 100%;
   padding: 12px;
   border-radius: 10px;
-  font-weight: 500;
 }
 
 .submit-btn:hover {
-  transform: scale(1.03);
-  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.3);
-}
-
-/* Empty */
-.empty {
-  text-align: center;
-  margin-top: 40px;
-  color: #64748b;
-}
-
-/* Loading */
-.loading {
-  text-align: center;
-  margin-top: 40px;
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  .card {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .actions {
-    width: 100%;
-    justify-content: flex-end;
-  }
-
-  .header {
-    flex-direction: column;
-    gap: 12px;
-    align-items: flex-start;
-  }
+  background: #16a34a;
 }
