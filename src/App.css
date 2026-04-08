@@ -3,21 +3,20 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
-/* Background */
+/* Body */
 body {
-  background: linear-gradient(135deg, #e0f2fe, #ede9fe);
-  color: #1e293b;
-  min-height: 100vh;
+  background: #F5F7FA;
+  color: #0F172A;
 }
 
 /* Container */
 .container {
-  max-width: 900px;
+  max-width: 880px;
   margin: auto;
-  padding: 40px 20px;
+  padding: 30px 20px;
 }
 
 /* Header */
@@ -25,67 +24,62 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 h2 {
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 600;
-  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 /* Add Button */
 .add-btn {
-  background: linear-gradient(135deg, #60a5fa, #a78bfa);
+  background: #0EA5E9;
   color: white;
-  padding: 8px 16px;
-  border-radius: 20px;
+  padding: 8px 14px;
+  border-radius: 6px;
   text-decoration: none;
-  font-size: 14px;
-  transition: 0.3s;
+  transition: all 0.2s ease;
 }
 
 .add-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+  background: #0284C7;
+  transform: translateY(-1px);
 }
 
 /* Card */
 .card {
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(10px);
-  border-radius: 14px;
-  padding: 18px;
-  margin-bottom: 15px;
+  background: #FFFFFF;
+  padding: 16px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 1px solid #E2E8F0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  transition: 0.3s;
+  transition: all 0.2s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.15);
+  border-color: #0EA5E9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 /* Text */
 .title {
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 .amount {
-  color: #6366f1;
+  color: #0EA5E9;
   font-weight: bold;
-  margin-top: 5px;
+  margin-top: 4px;
 }
 
 .meta {
   font-size: 12px;
-  color: #64748b;
+  color: #64748B;
   margin-top: 3px;
 }
 
@@ -93,85 +87,84 @@ h2 {
 button {
   border: none;
   padding: 6px 12px;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
-  margin-left: 8px;
+  margin-left: 6px;
   font-size: 12px;
-  transition: 0.3s;
+  transition: all 0.2s ease;
 }
 
 /* Edit */
 .edit-btn {
-  background: linear-gradient(135deg, #60a5fa, #3b82f6);
+  background: #10B981;
   color: white;
 }
 
 .edit-btn:hover {
-  transform: scale(1.1);
+  background: #059669;
+  transform: scale(1.05);
 }
 
 /* Delete */
 .delete-btn {
-  background: linear-gradient(135deg, #a78bfa, #8b5cf6);
+  background: #EF4444;
   color: white;
 }
 
 .delete-btn:hover {
-  transform: scale(1.1);
+  background: #DC2626;
+  transform: scale(1.05);
+}
+
+/* Actions */
+.actions {
+  display: flex;
 }
 
 /* Form */
 form {
-  max-width: 420px;
-  margin: 50px auto;
-  padding: 25px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  background: #FFFFFF;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #E2E8F0;
+  max-width: 450px;
+  margin: 40px auto;
 }
 
 /* Inputs */
 input, select {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  border: 1px solid #e2e8f0;
-  background: #f8fafc;
-  color: #1e293b;
-  font-size: 14px;
-}
-
-input::placeholder {
-  color: #94a3b8;
+  padding: 10px;
+  margin-bottom: 14px;
+  border-radius: 6px;
+  border: 1px solid #CBD5E1;
+  font-size: 13px;
+  transition: border 0.2s ease;
 }
 
 input:focus {
+  border-color: #0EA5E9;
   outline: none;
-  border: 1px solid #6366f1;
 }
 
 /* Submit */
 .submit-btn {
-  background: linear-gradient(135deg, #60a5fa, #8b5cf6);
+  background: #0EA5E9;
   color: white;
   width: 100%;
-  padding: 12px;
-  border-radius: 10px;
+  padding: 10px;
   font-weight: 500;
 }
 
 .submit-btn:hover {
-  transform: scale(1.03);
-  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.3);
+  background: #0284C7;
 }
 
 /* Empty */
 .empty {
   text-align: center;
   margin-top: 40px;
-  color: #64748b;
+  color: #64748B;
 }
 
 /* Loading */
@@ -180,7 +173,7 @@ input:focus {
   margin-top: 40px;
 }
 
-/* Mobile */
+/* 📱 Mobile Responsive */
 @media (max-width: 600px) {
   .card {
     flex-direction: column;
@@ -195,7 +188,7 @@ input:focus {
 
   .header {
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
     align-items: flex-start;
   }
 }
